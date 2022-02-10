@@ -61,5 +61,33 @@ following table shows the sports that I would recommend someone try.which helps 
         <td> $60 </td>
     </tr>
   </table>
+  <hr>
+  <blockquotes>
+    <h1>Graph traversal</h1>
+    <p>
+        Graph Traversal refers to the process of visiting (checking and/or updating) each vertex in a graph. 
+        Such traversals are classified by the order in which the vertices are visited. 
+        Tree traversal is a special case of graph traversal.
+    </p>
+    <a href="https://en.wikipedia.org/wiki/Graph_traversal">More Info</a>
+  </blockquotes>
+  <pre>
+    vector<vector<int>> adj; // graph represented as an adjacency list
+        int n; // number of vertices
+        
+        vector<bool> visited;
+        
+        void dfs(int v) {
+            visited[v] = true;
+            for (int u : adj[v]) {
+                if (!visited[u])
+                    dfs(u);
+            }
+        }
+  </pre>
+  <blockquotes>
+    <a href="https://cp-algorithms.com/graph/depth-first-search.html">Much more to know </a>
+  </blockquotes>
+
     </body>
 </html>
